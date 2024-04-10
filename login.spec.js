@@ -12,7 +12,7 @@ test.describe("Login validations", () => {
         //Adding Xray properties
         testInfo.annotations.push({ type: 'test_key', description: 'TA-2' });
         testInfo.annotations.push({ type: 'test_summary', description: 'Successful login.' });
-        testInfo.annotations.push({ type: 'requirements', description: 'TA-5' });
+        testInfo.annotations.push({ type: 'requirements', description: 'TA-6' });
         testInfo.annotations.push({ type: 'test_description', description: 'Validate that the login is successful.' });
 
         expect(name).toBe('Login succeeded. Now you can logout.');
@@ -27,7 +27,7 @@ test.describe("Login validations", () => {
         //Adding Xray properties
         testInfo.annotations.push({ type: 'test_key', description: 'TA-3' });
         testInfo.annotations.push({ type: 'test_summary', description: 'Unsuccessful login.' });
-        testInfo.annotations.push({ type: 'requirements', description: 'TA-5' });
+        testInfo.annotations.push({ type: 'requirements', description: 'TA-6' });
         testInfo.annotations.push({ type: 'test_description', description: 'Validate that the login is unsuccessful.' });
 
         // Capture a screenshot and attach it.
