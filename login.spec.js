@@ -3,7 +3,7 @@ const { LoginPage } = require('./models/Login');
 
 test.describe("Login validations", () => {
 
-    test('Login with valid credentials', async({ page }, testInfo) => {
+    test('Login with valid credentials @TA-2', async({ page }, testInfo) => {
         const loginPage = new LoginPage(page);
         await loginPage.navigate();
         await loginPage.login("demo","mode");
@@ -11,8 +11,10 @@ test.describe("Login validations", () => {
 
         //Adding Xray properties
     
-        testInfo.annotations.push({ type: 'test_key', description: 'TA-2' });
-        testInfo.annotations.push({ type: 'test_summary', description: 'Successful login.' });
+        testInfo.annotations.push({ type: 'test_key', description: testInfo.tags[0] });
+        // testInfo.annotations.push({ type: 'test_summary', description: 'Successful login.' });
+        
+        testInfo.annotations.push({ type: 'test_summary', description: testInfo.title });
         // testInfo.annotations.push({ type: 'requirements', description: 'TA-6' });
         testInfo.annotations.push({ type: 'test_description', description: 'Validate that the login is successful.' });
 
