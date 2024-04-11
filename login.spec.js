@@ -11,7 +11,7 @@ test.describe("Login validations", () => {
 
         //Adding Xray properties
     
-        testInfo.annotations.push({ type: 'test_key', description: testInfo.tags[0] });
+        testInfo.annotations.push({ type: 'test_key', description: testInfo.tags[0].replace("@", "") });
         // testInfo.annotations.push({ type: 'test_summary', description: 'Successful login.' });
         
         testInfo.annotations.push({ type: 'test_summary', description: testInfo.title });
